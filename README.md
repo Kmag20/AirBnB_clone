@@ -1,7 +1,7 @@
 This is the first part of the AirBnB clone project which involves building a command interpreter to manage all the instances/objects created. This first step is crucial since it will be intergrated with other important features in other projects.
 ## Classes :cl:
 
-HolbertonBnB utilizes the following classes:
+HBNB utilizes the following classes:
 
 |     | BaseModel | FileStorage | User | State | City | Amenity | Place | Review |
 | --- | --------- | ----------- | -----| ----- | -----| ------- | ----- | ------ |
