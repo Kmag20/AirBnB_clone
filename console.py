@@ -22,9 +22,9 @@ class HBNBCommand(cmd.Cmd):
         """ Creates an new instance """
         line_split = line.split(" ")
         if line == "":
-            print(" ** class name missing **")
+            print("** class name missing **")
         elif line_split[0] not in HBNBCommand.__classes:
-            print(" ** class doesn't exist")
+            print("** class doesn't exist")
         else:
             print(eval(line_split[0])().id)
             storage.save()
@@ -32,27 +32,27 @@ class HBNBCommand(cmd.Cmd):
         """ Prints the string repr of an instance based on the class name and id """
         line_split = line.split(" ")
         if line == "":
-            print(" ** class name missing **")
+            print("** class name missing **")
         elif line_split[0] not in HBNBCommand.__classes:
-            print(" ** class doesn't exist **")
+            print("** class doesn't exist **")
         elif len(line_split) == 1:
-            print(" ** instance id is missing **")
+            print("** instance id is missing **")
         else:
             objects = storage.all()
             try:
                 print(objects["{}.{}".format(line_split[0], line_split[1])])
             except KeyError:
-                print(" ** no instance found **")
+                print("** no instance found **")
 
     def do_destroy(self, line):
         """ Deletes an instance based on the class name and id """
         line_split = line.split(" ")
         if line == "":
-            print(" ** class name missing **")
+            print("** class name missing **")
         elif line_split[0] not in HBNBCommand.__classes:
-            print(" ** class doesn;t exist **")
+            print("** class doesn;t exist **")
         elif len(line_split) == 1:
-            print(" ** instance id missing **")
+            print("** instance id missing **")
         else:
             try:
                 objects = storage.all()
@@ -68,7 +68,7 @@ class HBNBCommand(cmd.Cmd):
             for valobj in objects.values():
                 print(valobj)
         elif line_split[0] not in HBNBCommand.__classes:
-            print("** class doesn't exist")
+            print("** class doesn't exist **")
         else:
             for valobj in objects.values():
                 if valobj.__class__.__name__ == line_split[0]:
@@ -85,11 +85,11 @@ class HBNBCommand(cmd.Cmd):
         elif len(line_split) == 1:
             print("** instance id missing **")
         elif "{}.{}".format(line_split[0], line_split[1]) not in objects:
-            print(" ** no instance found **")
+            print("** no instance found **")
         elif len(line_split) == 2:
             print("** attribute name missing **")
         elif len(line_split) == 3:
-            print(" **value missing **")
+            print("** value missing **")
         else:
             for object, value in objects.items():
                 if "{}.{}".format(line_split[0], line_split[1]) == object:
