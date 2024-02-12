@@ -14,6 +14,9 @@ class HBNBCommand(cmd.Cmd):
         """ command to exit the program """
         return True
 
+    def do_nothing(self):
+        """ do nothing """
+        pass
     def emptyline(self):
         """ emptyline """
         pass
