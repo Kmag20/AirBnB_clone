@@ -59,7 +59,7 @@ class HBNBCommand(cmd.Cmd):
                 del objects["{}.{}".format(line_split[0], line_split[1])]
                 storage.save()
             except KeyError:
-                print(" ** no instance found **")
+                print("** no instance found **")
 
     def do_all(self, line):
         line_split = line.split(" ")
@@ -81,7 +81,7 @@ class HBNBCommand(cmd.Cmd):
         if line == "":
             print("** class name missing **")
         elif line_split[0] not in HBNBCommand.__classes:
-            print("**class doesn't exist **")
+            print("** class doesn't exist **")
         elif len(line_split) == 1:
             print("** instance id missing **")
         elif "{}.{}".format(line_split[0], line_split[1]) not in objects:
