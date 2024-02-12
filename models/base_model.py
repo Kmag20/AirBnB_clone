@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """ Defines the BaseModel """
 import uuid
-
+import datetime
 
 class BaseModel:
     def __init__(self):
