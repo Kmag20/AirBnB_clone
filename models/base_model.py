@@ -29,7 +29,9 @@ class BaseModel:
     
     def save(self):
         """ Updates the public instance attribute """
+        from models import storage
         self.updated_at = datetime.datetime.now()
+        storage.save()
 
     def to_dict(self):
         """ returns a dict containing all key/value """
