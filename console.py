@@ -14,9 +14,14 @@ class HBNBCommand(cmd.Cmd):
         """ command to exit the program """
         print()
         return True
-    def emptyline(self, line):
+
+    def emptyline(self):
         """Do nothing when receiving an empty line"""
         pass
+
+    def help_help(self):
+        """ print help command description """
+        print("Provides description of a given command")
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
