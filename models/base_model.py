@@ -28,7 +28,9 @@ class BaseModel:
         return "[{}] ({}) {}".format(self.__class__.__name__, self.id, self.__dict__)
     def save(self):
         """ updates the public instance attrib with current time """
+        from models import storage
         self.updated_at = datetime.datetime.now()
+        storage.save()
 
     def to_dict(self):
         """ returns a dict containing all key/value """
