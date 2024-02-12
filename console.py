@@ -36,7 +36,7 @@ class HBNBCommand(cmd.Cmd):
         elif line_split[0] not in HBNBCommand.__classes:
             print("** class doesn't exist **")
         elif len(line_split) == 1:
-            print("** instance id is missing **")
+            print("** instance id missing **")
         else:
             objects = storage.all()
             try:
