@@ -3,13 +3,11 @@
 import datetime
 import uuid
 
-from models import storage
-
 
 class BaseModel:
     """ BaseModel class of the entire project """
-    from models import storage
     def __init__(self, *args, **kwargs):
+        from models import storage
         if kwargs and kwargs is not None:
             form =  "%Y-%m-%dT%H:%M:%S.%f"
             for arg, value in kwargs.items():

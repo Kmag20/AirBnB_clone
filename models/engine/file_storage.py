@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """ Defines the FilStorage class """
-
+import json
+from models.base_model import BaseModel
 
 class FileStorage:
     """ represents a storage engine """
