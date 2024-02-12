@@ -24,7 +24,7 @@ class HBNBCommand(cmd.Cmd):
         if line == "":
             print("** class name missing **")
         elif line_split[0] not in HBNBCommand.__classes:
-            print("** class doesn't exist")
+            print("** class doesn't exist **")
         else:
             print(eval(line_split[0])().id)
             storage.save()
