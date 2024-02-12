@@ -6,10 +6,20 @@ import uuid
 
 class BaseModel:
     """ BaseModel class of the entire project """
-    def __init__(self):
-        self.id = str(uuid.uuid4())
-        self.created_at = datetime.datetime.now()
-        self.updated_at = self.created_at
+    def __init__(self, *args, **kwargs):
+        if kwargs and kwargs is not None:
+            form =  "%Y-%m-%dT%H:%M:%S.%f"
+            for arg, value in kwargs.items():
+                if arg == "__class__":
+                    continue
+                if arg == 'created_at' or arg == 'updated_at':
+                    value = datetime.datetime.strptime(value, form)
+
+                setattr(self, arg, value)
+        else:
+            self.id = str(uuid.uuid4())
+            self.created_at = datetime.datetime.now()
+            self.updated_at = self.created_at
 
     def __str__(self):
         """ Returns an informal representation of an instance """
