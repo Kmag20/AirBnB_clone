@@ -1,12 +1,14 @@
 .body {
     margin: 0;
     padding: 0;
-    color: #484848;
+    color: #484848;    
+    font-family: "Sue Ellen Francisco", cursive;
+    font-weight: 400;
+    font-style: normal;
     font-size: 14px;
-    font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 .container {
     max-width: 1000px;
-    margin: 30px 0;
+    margin: 30px auto;
 }
