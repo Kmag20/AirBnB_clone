@@ -7,7 +7,6 @@
     align-items: center;
     justify-content: space-around;
     margin: auto;
-    /* position: relative; */
 }
 
 button {
@@ -17,8 +16,6 @@ button {
     height: 48px;
     width: 20%;
     border-radius: 4px;
-    /* position: absolute; */
-    /* right: 30px; */
 }
 
 button:hover {
