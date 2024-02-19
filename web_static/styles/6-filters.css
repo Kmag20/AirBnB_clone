@@ -29,8 +29,6 @@
 .filters .amenities {
   display: inline-block;
   height: 100%;
-  align-self: center;
-  justify-content: center;
   position: relative;
   width: 25%;
   padding: 20px 30px;
