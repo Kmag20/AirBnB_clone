@@ -8,4 +8,5 @@ footer {
     justify-content: center;
     position: absolute;
     bottom: 0;
+    display: none;
 }
